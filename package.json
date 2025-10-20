@@ -1,7 +1,7 @@
 {
   "name": "voice-agent-demo",
   "version": "1.0.0",
-  "description": "ElevenLabs Voice Agent Demo Website",
+  "description": "Voice Agent Demo Website",
   "main": "src/index.tsx",
   "scripts": {
     "dev": "webpack serve --mode development",
@@ -9,8 +9,7 @@
     "test": "jest",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "type-check": "tsc --noEmit",
-    "vercel-build": "npm run build"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.2.0",
