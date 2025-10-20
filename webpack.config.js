@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -27,6 +28,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        'REACT_APP_AGENT_ID': JSON.stringify(process.env.REACT_APP_AGENT_ID || 'agent_7901k7vk4bx8fxdbzgewvdnvrn2z'),
+        'REACT_APP_ELEVENLABS_API_KEY': JSON.stringify(process.env.REACT_APP_ELEVENLABS_API_KEY || ''),
+      }
     }),
   ],
   devServer: {
