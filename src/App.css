@@ -79,19 +79,105 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 3rem;
   margin: 2rem auto;
-  max-width: 500px;
+  width: 600px;
+  height: 600px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.widget-wrapper {
-  margin-bottom: 1rem;
-  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.widget-wrapper {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: transparent;
+  position: relative;
+  overflow: visible;
+}
+
+/* Force the ElevenLabs widget to be visible and properly sized */
+.widget-wrapper elevenlabs-convai,
+elevenlabs-convai {
+  width: 500px !important;
+  height: 500px !important;
+  min-width: 500px !important;
+  min-height: 500px !important;
+  max-width: 500px !important;
+  max-height: 500px !important;
+  display: block !important;
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  background: transparent !important;
+  overflow: visible !important;
+  transform: scale(1) !important;
+}
+
+/* Ensure all child elements of the widget are visible and properly sized */
+elevenlabs-convai *,
+elevenlabs-convai::before,
+elevenlabs-convai::after {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  position: relative !important;
+  overflow: visible !important;
+  transform: none !important;
+  clip: none !important;
+  clip-path: none !important;
+  mask: none !important;
+}
+
+/* Make sure any shadow DOM or iframe content is visible */
+elevenlabs-convai iframe,
+elevenlabs-convai div,
+elevenlabs-convai button,
+elevenlabs-convai canvas,
+elevenlabs-convai svg {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  position: relative !important;
+  overflow: visible !important;
+  transform: none !important;
+  z-index: inherit !important;
+}
+
+/* Force any buttons or interactive elements to be visible */
+elevenlabs-convai button,
+elevenlabs-convai [role="button"],
+elevenlabs-convai .microphone,
+elevenlabs-convai .call-button {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Force any circles or pulsating elements to be visible */
+elevenlabs-convai circle,
+elevenlabs-convai .circle,
+elevenlabs-convai .pulse,
+elevenlabs-convai .pulsing {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  animation: inherit !important;
 }
 
 .widget-description {

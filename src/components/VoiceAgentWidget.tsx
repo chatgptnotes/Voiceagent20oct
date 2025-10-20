@@ -5,6 +5,7 @@ declare global {
     interface IntrinsicElements {
       'elevenlabs-convai': {
         'agent-id': string;
+        style?: React.CSSProperties;
         children?: React.ReactNode;
       };
     }
@@ -28,6 +29,11 @@ const VoiceAgentWidget: React.FC = () => {
       if (document.head) {
         document.head.appendChild(newScript);
       }
+
+      // Add load event listener
+      newScript.onload = () => {
+        console.log('ElevenLabs widget script loaded successfully');
+      };
     }
   }, []);
 
@@ -36,12 +42,22 @@ const VoiceAgentWidget: React.FC = () => {
   return (
     <div className="voice-agent-container">
       <div className="widget-wrapper">
-        <elevenlabs-convai agent-id={agentId}></elevenlabs-convai>
+        <elevenlabs-convai
+          agent-id={agentId}
+          style={{
+            width: '500px',
+            height: '500px',
+            minWidth: '500px',
+            minHeight: '500px',
+            display: 'block',
+            visibility: 'visible',
+            opacity: 1,
+            position: 'relative',
+            overflow: 'visible',
+            zIndex: 10
+          }}
+        ></elevenlabs-convai>
       </div>
-      <p className="widget-description">
-        Click the microphone icon above to start a conversation with our AI voice agent.
-        Experience natural speech recognition and response capabilities powered by advanced AI technology.
-      </p>
     </div>
   );
 };
