@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -35,6 +36,11 @@ module.exports = {
         'REACT_APP_AGENT_ID': JSON.stringify(process.env.REACT_APP_AGENT_ID || 'agent_7901k7vk4bx8fxdbzgewvdnvrn2z'),
         'REACT_APP_ELEVENLABS_API_KEY': JSON.stringify(process.env.REACT_APP_ELEVENLABS_API_KEY || ''),
       }
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public/_redirects', to: '.' },
+      ],
     }),
   ],
   devServer: {
