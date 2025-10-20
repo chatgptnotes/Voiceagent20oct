@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-/* Header Styles */
+/* Header Styles - Mobile First */
 .header {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -18,81 +18,81 @@
 
 .header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem 20px;
 }
 
 .logo h2 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
-}
-
-.nav {
+  margin: 0;
+  text-align: center;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.logo h2 .material-icons {
+  font-size: 1.4rem;
 }
 
-.nav a:hover {
-  color: #ffd700;
-}
-
-/* Main Content */
+/* Main Content - Mobile First */
 .main-content {
   flex: 1;
-  margin-top: 80px;
+  margin-top: 60px;
+  padding: 0 10px;
 }
 
-/* Hero Section */
+/* Hero Section - Mobile First */
 .hero {
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
   color: white;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
   opacity: 0.9;
+  line-height: 1.4;
 }
 
-/* Voice Agent Widget */
+/* Voice Agent Widget - Mobile First */
 .voice-agent-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 3rem;
-  margin: 2rem auto;
-  width: 600px;
-  height: 600px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem;
+  max-width: calc(100vw - 2rem);
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 80vh;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .widget-wrapper {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,15 +102,15 @@
   overflow: visible;
 }
 
-/* Force the ElevenLabs widget to be visible and properly sized */
+/* Force the ElevenLabs widget to be visible and properly sized - Mobile First */
 .widget-wrapper elevenlabs-convai,
 elevenlabs-convai {
-  width: 500px !important;
-  height: 500px !important;
-  min-width: 500px !important;
-  min-height: 500px !important;
-  max-width: 500px !important;
-  max-height: 500px !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 250px !important;
+  min-height: 250px !important;
+  max-width: 300px !important;
+  max-height: 300px !important;
   display: block !important;
   position: relative !important;
   visibility: visible !important;
@@ -187,123 +187,137 @@ elevenlabs-convai .pulsing {
   font-size: 0.9rem;
 }
 
-/* Features Section */
+/* Features Section - Mobile First */
 .features {
   background: rgba(255, 255, 255, 0.05);
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .features h2 {
   text-align: center;
   color: white;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
   font-weight: 600;
+  padding: 0 1rem;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 .feature-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon .material-icons {
+  font-size: 2.5rem;
+  color: #ffd700;
 }
 
 .feature-card h3 {
   color: white;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .feature-card p {
   color: white;
   opacity: 0.8;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 0.9rem;
 }
 
-/* Demo Section */
+/* Demo Section - Mobile First */
 .demo-section {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .demo-section h3 {
   color: white;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
 .conversation-examples {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  max-width: 800px;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .example {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 25px;
-  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .example:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-/* Footer */
+/* Footer - Mobile First */
 .footer {
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 2rem 1rem 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-section h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
   font-weight: 600;
   color: #ffd700;
 }
 
 .footer-section p {
   opacity: 0.8;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 0.9rem;
 }
 
 .footer-section ul {
@@ -315,6 +329,7 @@ elevenlabs-convai .pulsing {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
   position: relative;
+  font-size: 0.9rem;
 }
 
 .footer-section li:before {
@@ -326,39 +341,125 @@ elevenlabs-convai .pulsing {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   opacity: 0.6;
+  font-size: 0.8rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Design - Progressive Enhancement */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
   .hero h1 {
     font-size: 2rem;
   }
 
+  .voice-agent-container {
+    max-width: 400px;
+  }
+
+  .widget-wrapper {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .widget-wrapper elevenlabs-convai,
+  elevenlabs-convai {
+    max-width: 350px !important;
+    max-height: 350px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header .container {
+    padding: 1rem 40px;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo h2 .material-icons {
+    font-size: 1.7rem;
+  }
+
+  .feature-icon .material-icons {
+    font-size: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
   .hero p {
-    font-size: 1rem;
-  }
-
-  .nav {
-    gap: 1rem;
-  }
-
-  .nav a {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   .voice-agent-container {
-    margin: 1rem;
-    padding: 1.5rem;
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .widget-wrapper {
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .widget-wrapper elevenlabs-convai,
+  elevenlabs-convai {
+    max-width: 400px !important;
+    max-height: 400px !important;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .conversation-examples {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .voice-agent-container {
+    max-width: 600px;
+    padding: 3rem;
+  }
+
+  .widget-wrapper {
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .widget-wrapper elevenlabs-convai,
+  elevenlabs-convai {
+    max-width: 500px !important;
+    max-height: 500px !important;
   }
 
   .features h2 {
     font-size: 2rem;
   }
 
-  .conversation-examples {
-    grid-template-columns: 1fr;
+  .demo-section h3 {
+    font-size: 1.6rem;
   }
 }

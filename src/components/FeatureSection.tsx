@@ -3,22 +3,22 @@ import React from 'react';
 const FeatureSection: React.FC = () => {
   const features = [
     {
-      icon: '🗣️',
+      icon: 'record_voice_over',
       title: 'Natural Speech',
       description: 'Experience human-like conversations with advanced speech synthesis and recognition.'
     },
     {
-      icon: '🧠',
+      icon: 'psychology',
       title: 'AI Intelligence',
       description: 'Powered by cutting-edge AI models that understand context and provide intelligent responses.'
     },
     {
-      icon: '⚡',
+      icon: 'flash_on',
       title: 'Real-time Processing',
       description: 'Lightning-fast response times for seamless, interactive conversations.'
     },
     {
-      icon: '🌐',
+      icon: 'language',
       title: 'Universal Access',
       description: 'Works across all modern browsers and devices for maximum accessibility.'
     }
@@ -31,7 +31,9 @@ const FeatureSection: React.FC = () => {
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
+              <div className="feature-icon">
+                <span className="material-icons">{feature.icon}</span>
+              </div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
             </div>

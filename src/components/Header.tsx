@@ -5,13 +5,11 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <h2>🎙️ Voice Agent Demo</h2>
+          <h2>
+            <span className="material-icons">mic</span>
+            Voice Agent
+          </h2>
         </div>
-        <nav className="nav">
-          <a href="#features">Features</a>
-          <a href="#demo">Demo</a>
-          <a href="#about">About</a>
-        </nav>
       </div>
     </header>
   );
