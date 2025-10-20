@@ -24,7 +24,7 @@ describe('App Component', () => {
 
   test('renders features section', () => {
     render(<App />);
-    const featuresHeading = screen.getByText(/Voice Agent Capabilities/i);
+    const featuresHeading = screen.getByRole('heading', { name: /Voice Agent Capabilities/i });
     expect(featuresHeading).toBeInTheDocument();
   });
 

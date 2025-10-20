@@ -8,14 +8,14 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>About This Demo</h4>
             <p>
-              This demonstration showcases the capabilities of ElevenLabs voice agents.
+              This demonstration showcases advanced voice agent capabilities.
               The widget above provides a real-time example of AI-powered voice interaction.
             </p>
           </div>
           <div className="footer-section">
             <h4>Technology</h4>
             <ul>
-              <li>ElevenLabs ConvAI</li>
+              <li>Advanced Voice AI</li>
               <li>React TypeScript</li>
               <li>Modern Web Standards</li>
               <li>Responsive Design</li>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 Voice Agent Demo. Powered by ElevenLabs.</p>
+          <p>&copy; 2024 Voice Agent Demo. Advanced AI Voice Technology.</p>
         </div>
       </div>
     </footer>

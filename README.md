@@ -1,6 +1,6 @@
 # Voice Agent Demo
 
-A single-page React website demonstrating ElevenLabs voice agent capabilities with an embedded ConvAI widget.
+A single-page React website demonstrating advanced voice agent capabilities with an embedded AI conversation widget.
 
 ## Features
 
@@ -16,7 +16,7 @@ A single-page React website demonstrating ElevenLabs voice agent capabilities wi
 ### Prerequisites
 
 - Node.js 16+ and npm
-- ElevenLabs account with ConvAI agent
+- Voice AI service account with conversation agent
 
 ### Installation
 
@@ -34,7 +34,7 @@ npm install
 3. Set up environment variables:
 ```bash
 cp .env.example .env
-# Edit .env with your ElevenLabs credentials
+# Edit .env with your voice AI service credentials
 ```
 
 4. Start development server:
@@ -49,15 +49,15 @@ Visit `http://localhost:3000` to see the application.
 Create a `.env` file in the root directory:
 
 ```env
-# ElevenLabs API Configuration
+# Voice AI Service Configuration
 REACT_APP_AGENT_ID=your_agent_id_here
 REACT_APP_ELEVENLABS_API_KEY=your_api_key_here
 ```
 
-### Getting ElevenLabs Credentials
+### Getting Voice AI Credentials
 
-1. **Agent ID**: Get from your ElevenLabs ConvAI dashboard
-2. **API Key**: Available in your ElevenLabs account settings
+1. **Agent ID**: Get from your voice AI service dashboard
+2. **API Key**: Available in your account settings
 
 ## Available Scripts
 
@@ -96,8 +96,8 @@ vercel
 
 Set these in your deployment platform:
 
-- `REACT_APP_AGENT_ID` - Your ElevenLabs agent ID
-- `REACT_APP_ELEVENLABS_API_KEY` - Your ElevenLabs API key
+- `REACT_APP_AGENT_ID` - Your voice AI agent ID
+- `REACT_APP_ELEVENLABS_API_KEY` - Your voice AI service API key
 
 ## Project Structure
 
@@ -121,7 +121,7 @@ src/
 - **Build Tool**: Webpack 5
 - **Testing**: Jest + React Testing Library
 - **Linting**: ESLint
-- **Voice AI**: ElevenLabs ConvAI Widget
+- **Voice AI**: Advanced Conversation Widget
 
 ## Usage Examples
 
@@ -161,6 +161,6 @@ MIT License - feel free to use this project for your own voice agent demonstrati
 ## Support
 
 For issues related to:
-- **ElevenLabs API**: Check [ElevenLabs Documentation](https://elevenlabs.io/docs)
+- **Voice AI Service**: Check your voice AI provider's documentation
 - **React/TypeScript**: See official documentation
 - **This project**: Open an issue in the GitHub repository

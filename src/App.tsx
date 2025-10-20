@@ -14,7 +14,7 @@ const App: React.FC = () => {
           <div className="container">
             <h1>Experience AI Voice Conversations</h1>
             <p>
-              Interact with our advanced voice agent powered by ElevenLabs.
+              Interact with our advanced voice agent powered by cutting-edge AI.
               Experience natural, intelligent conversations that demonstrate
               the future of AI communication.
             </p>

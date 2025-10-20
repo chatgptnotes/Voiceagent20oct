@@ -40,7 +40,7 @@ const VoiceAgentWidget: React.FC = () => {
       </div>
       <p className="widget-description">
         Click the microphone icon above to start a conversation with our AI voice agent.
-        Experience natural speech recognition and response capabilities.
+        Experience natural speech recognition and response capabilities powered by advanced AI technology.
       </p>
     </div>
   );

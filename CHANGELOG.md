@@ -6,7 +6,7 @@ All notable changes to the Voice Agent Demo project.
 
 ### Added
 - ✨ Initial release of Voice Agent Demo website
-- 🎙️ ElevenLabs ConvAI widget integration
+- 🎙️ Advanced voice AI widget integration
 - 🎨 Modern, responsive UI design with gradient background
 - 📱 Mobile-first responsive design
 - ⚡ Lightning-fast build and development setup
@@ -18,7 +18,7 @@ All notable changes to the Voice Agent Demo project.
 ### Built Components
 - **Header**: Navigation with smooth anchor links
 - **Hero Section**: Eye-catching introduction with call-to-action
-- **VoiceAgentWidget**: ElevenLabs ConvAI integration with fallback handling
+- **VoiceAgentWidget**: Voice AI integration with fallback handling
 - **FeatureSection**: Showcase of voice agent capabilities
 - **Footer**: Technology stack and feature information
 
