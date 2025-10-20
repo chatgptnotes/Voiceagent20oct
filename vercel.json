@@ -1,5 +1,4 @@
 {
-  "name": "voiceagent20oct",
   "version": 2,
   "builds": [
     {
@@ -15,9 +14,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "REACT_APP_AGENT_ID": "@react_app_agent_id",
-    "REACT_APP_ELEVENLABS_API_KEY": "@react_app_elevenlabs_api_key"
-  }
+  ]
 }
