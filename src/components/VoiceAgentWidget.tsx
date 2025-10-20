@@ -13,6 +13,9 @@ declare global {
 
 const VoiceAgentWidget: React.FC = () => {
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+
     // Ensure the script is loaded
     const script = document.querySelector('script[src="https://unpkg.com/@elevenlabs/convai-widget-embed"]');
     if (!script) {
